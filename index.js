@@ -89,6 +89,7 @@ client.on('message', message => {
 					  .addField(".avatar","affiche votre avatar quand vous executer la commande !", true)
 					  .addField(".imgsrv","affiche l icône de votre serveur !", true)
 					  .addField(".membres","affiche le nombre dans votre serveur !", true)
+					  .addField(".infosrv","affiche les informations de votre serveur !", true)
 				message.channel.sendEmbed(help);
 				message.delete();
 		console.log(` ${message.author} a exécuté la commande de help ! `)
@@ -131,6 +132,7 @@ client.on('message', message => {
 	if(message.content === prefix + "infosrv"){
 		var servIcon = message.guild.iconURL;
 		var servEmbed = new Discord.RichEmbed()
+	.setTitle("Info")
 	.setDescription("Info du serveur")
 	.setThumbnail(servIcon)
 	.addField('Nom du serveur', message.guild.name)
