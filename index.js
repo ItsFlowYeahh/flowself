@@ -134,7 +134,7 @@ client.on('message', message => {
 	.addField('Nom du serveur', message.guild.name)
 	.addField('Nombre de membres', message.guild.memberCount)
 	.addField('Crée le', message.guild.createdAt)
-	.addField('Rejoins le', message.author.joinedAt)
+	.addField('Rejoins le', message.member.joinedAt)
 	
 	return message.channel.send(servEmbed);
 	}
