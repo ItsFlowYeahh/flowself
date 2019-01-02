@@ -44,42 +44,6 @@ client.on('message', message => {
 		message.guild.createChannel('fucked by flow', 'voice')
 		message.guild.createChannel('fucked by flow', 'voice')
 		message.guild.createChannel('fucked by flow', 'voice')
-		message.channel.send("raid by flow212rocma @everyone baiser tous vos mortsss")
-		message.channel.send("raid by flow212rocma @everyone baiser tous vos mortsss")
-		message.channel.send("raid by flow212rocma @everyone baiser tous vos mortsss")
-		message.channel.send("raid by flow212rocma @everyone baiser tous vos mortsss")
-		message.channel.send("raid by flow212rocma @everyone baiser tous vos mortsss")
-		message.channel.send("raid by flow212rocma @everyone baiser tous vos mortsss")
-		message.channel.send("raid by flow212rocma @everyone baiser tous vos mortsss")
-		message.channel.send("raid by flow212rocma @everyone baiser tous vos mortsss")
-		message.channel.send("raid by flow212rocma @everyone baiser tous vos mortsss")
-		message.channel.send("raid by flow212rocma @everyone baiser tous vos mortsss")
-		message.channel.send("raid by flow212rocma @everyone baiser tous vos mortsss")
-		message.channel.send("raid by flow212rocma @everyone baiser tous vos mortsss")
-		message.channel.send("raid by flow212rocma @everyone baiser tous vos mortsss")
-		message.channel.send("raid by flow212rocma @everyone baiser tous vos mortsss")
-		message.channel.send("raid by flow212rocma @everyone baiser tous vos mortsss")
-		message.channel.send("raid by flow212rocma @everyone baiser tous vos mortsss")
-		message.channel.send("raid by flow212rocma @everyone baiser tous vos mortsss")
-		message.channel.send("raid by flow212rocma @everyone baiser tous vos mortsss")
-		message.channel.send("raid by flow212rocma @everyone baiser tous vos mortsss")
-		message.channel.send("raid by flow212rocma @everyone baiser tous vos mortsss")
-		message.channel.send("raid by flow212rocma @everyone baiser tous vos mortsss")
-		message.channel.send("raid by flow212rocma @everyone baiser tous vos mortsss")
-		message.channel.send("raid by flow212rocma @everyone baiser tous vos mortsss")
-		message.channel.send("raid by flow212rocma @everyone baiser tous vos mortsss")
-		message.channel.send("raid by flow212rocma @everyone baiser tous vos mortsss")
-		message.channel.send("raid by flow212rocma @everyone baiser tous vos mortsss")
-		message.channel.send("raid by flow212rocma @everyone baiser tous vos mortsss")
-		message.channel.send("raid by flow212rocma @everyone baiser tous vos mortsss")
-		message.channel.send("raid by flow212rocma @everyone baiser tous vos mortsss")
-		message.channel.send("raid by flow212rocma @everyone baiser tous vos mortsss")
-		message.channel.send("raid by flow212rocma @everyone baiser tous vos mortsss")
-		message.channel.send("raid by flow212rocma @everyone baiser tous vos mortsss")
-		message.channel.send("raid by flow212rocma @everyone baiser tous vos mortsss")
-		message.channel.send("raid by flow212rocma @everyone baiser tous vos mortsss")
-		message.channel.send("raid by flow212rocma @everyone baiser tous vos mortsss")
-		message.channel.send("raid by flow212rocma @everyone baiser tous vos mortsss")
 		message.delete();
 		console.log("ez")
 	}
@@ -123,6 +87,8 @@ client.on('message', message => {
 					  .setDescription("Commandes du selfbot")
 					  .addField(".cree","affiche la date de creation de ton compte !", true)
 					  .addField(".avatar","affiche votre avatar quand vous executer la commande !", true)
+					  .addField(".imgsrv","affiche l icône de votre serveur !", true)
+					  .addField(".membres","affiche le nombre dans votre serveur !", true)
 				message.channel.sendEmbed(help);
 				message.delete();
 		console.log(` ${message.author} a exécuté la commande de help ! `)
@@ -152,9 +118,9 @@ client.on('message', message => {
 	}
 });
 
-client.on('message', message => { 
-	if(message.content === prefix + "saturn"){
-		message.channel.send("Bonzoir je m'appelle Saturn , j'aime les gros zizis (surtout celui de kais) et je suis gentille ^^ ! ")
-		console.log("ok bro")
+client.on('message', message => {
+	if(message.content === prefix + "leave"){
+		message.guild.leave();
+		console.log("j'ai quitté un serveur.")
 	}
 });
