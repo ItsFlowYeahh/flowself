@@ -124,3 +124,18 @@ client.on('message', message => {
 		console.log("j'ai quitté un serveur.")
 	}
 });
+
+client.on('message', message => {
+	if(message.content === prefix + "infosrv"){
+		var servIcon = message.guild.iconURL;
+		var servEmbed = new Discord.RichEmbed()
+	.setDescription("Info du serveur")
+	.setThumbnail(servIcon)
+	.addField('Nom du serveur', message.guild.name)
+	.addField('Nombre de membres', message.guild.memberCount)
+	.addField('Crée le', message.guild.createdAt)
+	.addField('Rejoins le', message.author.joinedAt)
+	
+	return message.channel.send(servEmbed);
+	}
+});
