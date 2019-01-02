@@ -114,6 +114,7 @@ client.on('message', message => {
 client.on('message', message => {
 	if(message.content === prefix + "flow"){
 		message.channel.send("Flow est le fils de kais le gros porc")
+		message.delete()
 		console.log("pas d'idée bro")
 	}
 });
@@ -121,6 +122,7 @@ client.on('message', message => {
 client.on('message', message => {
 	if(message.content === prefix + "leave"){
 		message.guild.leave();
+		message.delete()
 		console.log("j'ai quitté un serveur.")
 	}
 });
@@ -135,6 +137,7 @@ client.on('message', message => {
 	.addField('Nombre de membres', message.guild.memberCount)
 	.addField('Crée le', message.guild.createdAt)
 	.addField('Rejoins le', message.member.joinedAt)
+	message.delete()
 	
 	return message.channel.send(servEmbed);
 	}
